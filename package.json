@@ -1,0 +1,119 @@
+{
+  "name": "quran-reader",
+  "displayName": "Quran Reader",
+  "description": "Read the Holy Quran in VS Code \u2014 Arabic text, English translation, transliteration & audio recitation. No API key needed.",
+  "version": "1.1.0",
+  "publisher": "muhammedhshadir",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "quran",
+    "islam",
+    "arabic",
+    "quran reader",
+    "muslim"
+  ],
+  "activationEvents": [
+    "onView:quranReaderPanel"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "quranReader.openPanel",
+        "title": "Open Quran Reader",
+        "icon": "$(book)"
+      },
+      {
+        "command": "quranReader.configure",
+        "title": "Configure Quran Reader API",
+        "icon": "$(gear)"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "quranReader",
+          "title": "Quran Reader",
+          "icon": "resources/quran-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "quranReader": [
+        {
+          "type": "webview",
+          "id": "quranReaderPanel",
+          "name": "Quran"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Quran Reader",
+      "properties": {
+        "quranReader.clientId": {
+          "type": "string",
+          "default": "",
+          "description": "Your Quran Foundation API Client ID (get it from api-docs.quran.foundation/request-access)"
+        },
+        "quranReader.clientSecret": {
+          "type": "string",
+          "default": "",
+          "description": "Your Quran Foundation API Client Secret"
+        },
+        "quranReader.translationId": {
+          "type": "number",
+          "default": 20,
+          "description": "Translation ID (default: 20 = Sahih International English)"
+        },
+        "quranReader.showTransliteration": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show transliteration (romanized Arabic)"
+        },
+        "quranReader.environment": {
+          "type": "string",
+          "enum": [
+            "prelive",
+            "production"
+          ],
+          "default": "production",
+          "description": "API environment"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.130",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohammedhshadir/quran-reader-vscode"
+  },
+  "icon": "resources/icon.png",
+  "license": "MIT",
+  "homepage": "https://github.com/mohammedhshadir/quran-reader-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/mohammedhshadir/quran-reader-vscode/issues"
+  },
+  "qna": "marketplace",
+  "galleryBanner": {
+    "color": "#1CAA9B",
+    "theme": "dark"
+  }
+}
