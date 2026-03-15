@@ -3,7 +3,7 @@
 Read the Holy Quran without leaving your editor. A beautiful, distraction-free Quran reader right inside VS Code — with Arabic text, English translation, transliteration, and audio recitation.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohammedhshadir/quran-reader-vscode/main/resources/screenshot-panel.png" alt="Quran Reader - Verse by Verse" width="400"/>
+  <img src="resources/screenshot-panel.png" alt="Quran Reader - Verse by Verse" width="400"/>
 </p>
 
 ## Features
@@ -19,7 +19,7 @@ Read the Holy Quran without leaving your editor. A beautiful, distraction-free Q
 - **🔤 UthmanicHafs Font** — The same beautiful font used on Quran.com
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mohammedhshadir/quran-reader-vscode/main/resources/screenshot2.png" alt="Quran Reader - Surah List" width="260"/>
+  <img src="resources/screenshot2.png" alt="Quran Reader - Surah List" width="260"/>
 </p>
 
 ## No Setup Required
